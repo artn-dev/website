@@ -1,8 +1,15 @@
+import Head from 'next/head';
 import '../styles/globals.scss'
 
 function MyApp({ Component, pageProps }) {
   return (
     <div className="container-fluid d-flex flex-column min-vh-100 px-0 bg-light">
+      <Head>
+        <link rel="preconnect" href="https://fonts.gstatic.com"/>
+        <link href="https://fonts.googleapis.com/css2?family=Days+One&display=swap" rel="stylesheet"/> 
+      </Head>
+
+
       <Component {...pageProps} />
 
       <script
