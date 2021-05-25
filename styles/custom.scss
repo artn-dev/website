@@ -2,6 +2,16 @@
 @import "../node_modules/bootstrap/scss/mixins";
 @import "../node_modules/bootstrap/scss/variables";
 
+$theme-colors: (
+  "primary":    $purple,
+  "secondary":  $orange,
+  "success":    $success,
+  "info":       $info,
+  "warning":    $warning,
+  "danger":     $danger,
+  "light":      $light,
+  "dark":       $dark
+);
 
 
 @import "../node_modules/bootstrap/scss/bootstrap";
