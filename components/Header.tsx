@@ -22,7 +22,7 @@ const Header = () => (
             <Link href="/" passHref>
                 <a className="navbar-brand d-flex align-items-center" href="#">
                     <img height="32" src="/logo-gray-small.png" alt=""/>
-                    <p className="text-primary m-0 fs-3">ARTN</p>
+                    <p className="text-primary text-special m-0 fs-3">ARTN</p>
                 </a>
             </Link>
 

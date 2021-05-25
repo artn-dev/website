@@ -13,5 +13,9 @@ $theme-colors: (
   "dark":       $dark
 );
 
+.text-special {
+    font-family: 'Days One', 'Roboto', sans-serif;
+}
+
 
 @import "../node_modules/bootstrap/scss/bootstrap";
