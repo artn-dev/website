@@ -16,14 +16,13 @@ const HeaderLink = ({ children, href = "#"}: HeaderLinkProps) => (
 )
 
 const Header = () => (
-
     <nav className="navbar navbar-expand-lg navbar-light bg-light border-bottom border-primary">
         <div className="container-fluid">
 
             <Link href="/" passHref>
-                <a className="navbar-brand d-flex" href="#">
+                <a className="navbar-brand d-flex align-items-center" href="#">
                     <img height="32" src="/logo-gray-small.png" alt=""/>
-                    <p className="text-primary">ARTN</p>
+                    <p className="text-primary m-0 fs-3">ARTN</p>
                 </a>
             </Link>
 
@@ -52,7 +51,6 @@ const Header = () => (
 
         </div>
     </nav>
-
 );
 
 export default Header;
