@@ -2,7 +2,7 @@ import '../styles/globals.scss'
 
 function MyApp({ Component, pageProps }) {
   return (
-    <div className="container-fluid min-vh-100 px-0 bg-light">
+    <div className="container-fluid d-flex flex-column min-vh-100 px-0 bg-light">
       <Component {...pageProps} />
 
       <script
