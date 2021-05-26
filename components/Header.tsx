@@ -15,29 +15,33 @@ interface HeaderProps {
 const HeaderLink = ({ children, href = "#"}: HeaderLinkProps) => (
     <div className="nav-item">
         <Link href={href} passHref>
-            <a className="nav-link text-secondary">{children}</a>
+            <a className="nav-link link-secondary">{children}</a>
         </Link>
     </div>
 )
 
 const Header = ({ cover = false }: HeaderProps) => {
 
-    var navbarClass = classNames({
-        "navbar": true,
-        "navbar-expand-lg": true,
-        "navbar-light": true,
-        "bg-light": !cover,
-        "border-bottom": !cover,
-        "border-primary": !cover
-    });
+    var navbarClass = classNames(
+        "navbar",
+        "navbar-expand-lg",
+        {
+            "navbar-light": !cover,
+            "bg-light": !cover,
+            "border-bottom": !cover,
+            "border-primary": !cover
+        }
+    );
 
-    var brandName = classNames({
-        "text-primary": !cover,
-        "text-secondary": cover,
-        "text-special": true,
-        "m-0": true,
-        "fs-3": true
-    })
+    var brandName = classNames(
+        "text-special",
+        "m-0",
+        "fs-3",
+        {
+            "text-primary": !cover,
+            "text-secondary": cover,
+        }
+    );
 
     var brandImgPath = cover ? "/logo-orange.png" : "/logo-purple.png";
     
