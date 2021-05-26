@@ -24,7 +24,7 @@ const Footer = () => {
 
                 <div className="row p-2">
                     <span className="text-muted">Copyright &copy; 2021,
-                    Azemar da Rosa Teixeira Neto. All rights reserved</span>
+                    Azemar da Rosa Teixeira Neto. Todos os direitos reservados</span>
                 </div>
 
             </div>
