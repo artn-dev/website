@@ -13,6 +13,9 @@ $theme-colors: (
   "dark":       $dark
 );
 
+$navbar-light-color: $orange;
+$navbar-light-hover-color: $orange-600;
+
 .text-special {
     font-family: 'Days One', 'Roboto', sans-serif;
 }
