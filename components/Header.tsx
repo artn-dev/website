@@ -7,10 +7,6 @@ interface HeaderLinkProps {
     href?: string;
 };
 
-interface HeaderProps {
-    cover?: boolean;
-}
-
 
 const HeaderLink = ({ children, href = "#"}: HeaderLinkProps) => (
     <div className="nav-item">
@@ -20,30 +16,26 @@ const HeaderLink = ({ children, href = "#"}: HeaderLinkProps) => (
     </div>
 )
 
-const Header = ({ cover = false }: HeaderProps) => {
+const Header = () => {
 
     var navbarClass = classNames(
         "navbar",
         "navbar-expand-lg",
-        {
-            "navbar-light": !cover,
-            "bg-light": !cover,
-            "border-bottom": !cover,
-            "border-primary": !cover
-        }
+        "navbar-light",
+        "bg-light",
+        "border-bottom",
+        "border-primary"
     );
 
     var brandName = classNames(
         "text-special",
         "m-0",
         "fs-3",
-        {
-            "text-primary": !cover,
-            "text-secondary": cover,
-        }
+        "text-primary",
+        "text-secondary"
     );
 
-    var brandImgPath = cover ? "/logo-orange.png" : "/logo-purple.png";
+    var brandImgPath = "/logo-orange.png";
     
     return (
         <nav className={navbarClass}>

@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <>
       <div className={styles.backgroundImage}/>
-      <Header cover/>
+      <Header/>
 
       <div className="container">
 
