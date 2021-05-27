@@ -3,7 +3,7 @@ const Footer = () => {
     return (
         <footer className="row d-flex d-column mt-auto bg-dark text-light">
 
-          <div className="d-flex justify-content-around align-items-center py-5">
+          <div className="d-flex flex-wrap justify-content-around align-items-center py-5">
 
             <div className="d-flex flex-column" style={{gap: "1rem"}}>
               <h2 className="text-special m-0 fs-1" style={{color: "#9381FF", letterSpacing: 4}}>Contrate-me</h2>
