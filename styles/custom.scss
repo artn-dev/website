@@ -3,18 +3,15 @@
 @import "../node_modules/bootstrap/scss/variables";
 
 $theme-colors: (
-  "primary":    $purple,
-  "secondary":  $orange,
+  "primary":    #492B7B,
+  "secondary":  #F7D914,
   "success":    $success,
-  "info":       $info,
-  "warning":    $warning,
+  "info":       #9381FF,
+  "warning":    #ED8A0A,
   "danger":     $danger,
   "light":      $light,
   "dark":       $dark
 );
-
-$navbar-light-color: $orange;
-$navbar-light-hover-color: $orange-600;
 
 .text-special {
     font-family: 'Days One', 'Roboto', sans-serif;
