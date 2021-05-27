@@ -1,5 +1,4 @@
 const Footer = () => {
-    
     return (
         <footer className="row d-flex d-column mt-auto bg-dark text-light">
 
@@ -36,7 +35,10 @@ const Footer = () => {
                 azemarteixeira@gmail.com
               </small>
 
-            <div className="py-2 text-info d-flex justify-content-center" style={{borderTop: "1px solid #6c757d", gap: "0.3rem"}}>
+            <div
+              className="py-2 text-info d-flex justify-content-center"
+              style={{borderTop: "1px solid #6c757d", gap: "1rem"}}
+            >
 
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" className="bi bi-discord" viewBox="0 0 16 16">
                   <path d="M6.552 6.712c-.456 0-.816.4-.816.888s.368.888.816.888c.456 0 .816-.4.816-.888.008-.488-.36-.888-.816-.888zm2.92 0c-.456 0-.816.4-.816.888s.368.888.816.888c.456 0 .816-.4.816-.888s-.36-.888-.816-.888z"/>
