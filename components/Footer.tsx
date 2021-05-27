@@ -6,7 +6,7 @@ const Footer = () => {
         <footer className="footer mt-auto text-center bg-dark py-3">
             <div className=" container d-flex flex-column">
 
-                <div className="text-primary row p-2">
+                <div className="text-secondary row p-2">
 
                     <div className="col d-flex justify-content-end">
                         <svg xmlns="http://www.w3.org/2000/svg" width={iconSize} height={iconSize} fill="currentColor" className="bi bi-github" viewBox="0 0 16 16">
