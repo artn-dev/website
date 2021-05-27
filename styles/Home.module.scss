@@ -2,40 +2,13 @@
 @import '../node_modules/bootstrap/scss/variables';
 @import '../node_modules/bootstrap/scss/mixins';
 
-@mixin fullscreen {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-}
 
 .backgroundImage {
-  @include fullscreen();
-  width: 100vw;
   background-image: url("/background.jpg");
-  background-size: 100%;
-  z-index: -1;
-}
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  z-index: $zindex-modal;
 
-.backgroundImage::after {
-  @include fullscreen();
-  content: " ";
-  background-color: $purple;
-  opacity: 50%;
-}
-
-.profilePic {
-  max-width: 17rem;
-  text-align: center;
-  border-radius: 50%;
-  padding: 0.5rem;
-  border: 5px solid $orange;
-
-  img {
-    padding: 0;
-    border: none;
-    background-color: $orange;
-    width: 100%;
-  }
 }
