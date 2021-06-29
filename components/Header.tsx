@@ -20,7 +20,6 @@ const HeaderLink = ({ children, href = "#"}: HeaderLinkProps) => (
 const Logo = () => (
     <Link href="/" passHref>
         <a className="navbar-brand d-flex align-items-center link-light">
-            <img height="40" src="logo-yellow.png" alt=""/>
             <p className="m-0 fs-5">artn</p>
         </a>
     </Link>
