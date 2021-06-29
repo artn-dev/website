@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Logo from './Logo'
 
 
 interface HeaderLinkProps {
@@ -17,20 +18,14 @@ const HeaderLink = ({ children, href = "#"}: HeaderLinkProps) => (
     </div>
 )
 
-const Logo = () => (
-    <Link href="/" passHref>
-        <a className="navbar-brand d-flex align-items-center link-light">
-            <p className="m-0 fs-5">artn</p>
-        </a>
-    </Link>
-)
-
 const Header = () => (
     <header className="fixed-top">
         <nav className="navbar navbar-expand-lg bg-primary">
             <div className="container">
 
-                <Logo />
+                <div className="navbar-brand">
+                    <Logo />
+                </div>
 
                 <button
                     className="navbar-toggler"
