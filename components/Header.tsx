@@ -10,21 +10,22 @@ interface HeaderLinkProps {
 const HeaderLink = ({ children, href = "#"}: HeaderLinkProps) => (
     <div className="nav-item">
         <Link href={href} passHref>
-            <a className="nav-link link-secondary">{children}</a>
+            <a className="nav-link link-light" style={{
+                fontSize: 15,
+            }}>{children}</a>
         </Link>
     </div>
 )
 
 const Header = () => (
     <header className="fixed-top">
-
         <nav className="navbar navbar-expand-lg bg-primary">
-            <div className="container-fluid">
+            <div className="container">
 
                 <Link href="/" passHref>
-                    <a className="navbar-brand d-flex align-items-center">
+                    <a className="navbar-brand d-flex align-items-center link-light">
                         <img height="40" src="logo-yellow.png" alt=""/>
-                        <p className="text-secondary text-special m-0 fs-2">ARTN</p>
+                        <p className="m-0 fs-5">artn</p>
                     </a>
                 </Link>
 
@@ -53,7 +54,6 @@ const Header = () => (
 
             </div>
         </nav>
-
     </header>
 )
 
