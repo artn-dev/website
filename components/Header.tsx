@@ -17,17 +17,21 @@ const HeaderLink = ({ children, href = "#"}: HeaderLinkProps) => (
     </div>
 )
 
+const Logo = () => (
+    <Link href="/" passHref>
+        <a className="navbar-brand d-flex align-items-center link-light">
+            <img height="40" src="logo-yellow.png" alt=""/>
+            <p className="m-0 fs-5">artn</p>
+        </a>
+    </Link>
+)
+
 const Header = () => (
     <header className="fixed-top">
         <nav className="navbar navbar-expand-lg bg-primary">
             <div className="container">
 
-                <Link href="/" passHref>
-                    <a className="navbar-brand d-flex align-items-center link-light">
-                        <img height="40" src="logo-yellow.png" alt=""/>
-                        <p className="m-0 fs-5">artn</p>
-                    </a>
-                </Link>
+                <Logo />
 
                 <button
                     className="navbar-toggler"
