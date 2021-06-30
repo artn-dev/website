@@ -1,5 +1,21 @@
+import Link from 'next/link'
 import Logo from './Logo'
 import styles from '../styles/Home.module.scss'
+
+
+interface FooterLinkProps {
+  children: React.ReactNode;
+  href?: string;
+};
+
+
+const FooterLink = ({ children, href = "/"}: FooterLinkProps) => (
+  <>
+    <Link href={href} passHref>
+      <a className="link-light">{children}</a>
+    </Link>
+  </>
+)
 
 const Footer = () => {
   return (
@@ -11,9 +27,9 @@ const Footer = () => {
 
         <div className="col-12 col-md-4 d-flex justify-content-center">
           <div className={styles.footerLinks}>
-            <p className="m-0">Github</p>
-            <p className="m-0">Linkedin</p>
-            <p className="m-0">Website</p>
+            <FooterLink>Github</FooterLink>
+            <FooterLink>Linkedin</FooterLink>
+            <FooterLink>Website</FooterLink>
           </div>
         </div>
 
