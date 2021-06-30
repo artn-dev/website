@@ -6,16 +6,22 @@ import MainHero from '../components/MainHero';
 
 const Home = () => {
   return (
-    <>
-      <Header/>
+    <div className="container-fluid d-flex flex-column min-vh-100 bg-light">
+      <div className="row">
+        <Header/>
+      </div>
 
-      <MainHero />
+      <div className="row">
+        <MainHero />
+      </div>
 
       <div id="second-row"></div>
       <div id="filler" style={{minHeight: "20.5em"}}></div>
 
-      <Footer/>
-    </>
+      <div className="row">
+        <Footer/>
+      </div>
+    </div>
   )
 }
 

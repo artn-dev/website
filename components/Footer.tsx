@@ -19,7 +19,8 @@ const FooterLink = ({ children, href = "/"}: FooterLinkProps) => (
 
 const Footer = () => {
   return (
-    <footer className="row bg-dark text-light py-5">
+    <footer className="container-fluid bg-dark text-light py-5">
+      <div className="row">
 
         <div className="col-12 col-md-4 d-flex justify-content-center align-items-center">
           <Logo />
@@ -37,6 +38,7 @@ const Footer = () => {
           <p className={styles.copyrightNotice}>© Azemar da Rosa Teixeira Neto, 2021</p>
         </div>
 
+      </div>
     </footer>
   )
 };
