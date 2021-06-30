@@ -8,7 +8,7 @@ interface HeaderLinkProps {
 };
 
 
-const HeaderLink = ({ children, href = "#"}: HeaderLinkProps) => (
+const HeaderLink = ({ children, href = "/"}: HeaderLinkProps) => (
     <div className="nav-item">
         <Link href={href} passHref>
             <a className="nav-link link-light" style={{
@@ -19,8 +19,8 @@ const HeaderLink = ({ children, href = "#"}: HeaderLinkProps) => (
 )
 
 const Header = () => (
-    <header className="fixed-top">
-        <nav className="navbar navbar-expand-lg bg-primary">
+    <header className="fixed-top bg-primary">
+        <nav className="navbar navbar-expand-lg">
             <div className="container">
 
                 <div className="navbar-brand">
@@ -42,10 +42,10 @@ const Header = () => (
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <div className="navbar-nav ms-auto">
 
-                        <HeaderLink href="/">Home</HeaderLink>
-                        <HeaderLink href="#">Projetos</HeaderLink>
-                        <HeaderLink href="#">Sobre</HeaderLink>
-                        <HeaderLink href="#">Galeria</HeaderLink>
+                        <HeaderLink>Home</HeaderLink>
+                        <HeaderLink>Projetos</HeaderLink>
+                        <HeaderLink>Sobre</HeaderLink>
+                        <HeaderLink>Galeria</HeaderLink>
 
                     </div>
                 </div>
