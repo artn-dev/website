@@ -19,7 +19,7 @@ const HeaderLink = ({ children, href = "#"}: HeaderLinkProps) => (
 )
 
 const Header = () => (
-    <header className="fixed-top bg-primary">
+    <header className="bg-primary">
         <nav className="navbar navbar-expand-lg">
             <div className="container">
 

@@ -6,7 +6,7 @@ import About from '../components/About';
 const Home = () => {
   return (
     <div className="container-fluid d-flex flex-column min-vh-100 bg-light">
-      <div className="row">
+      <div className="row sticky-top">
         <Header/>
       </div>
 
