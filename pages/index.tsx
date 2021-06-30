@@ -13,9 +13,6 @@ const Home = () => {
         <MainHero />
       </div>
 
-      <div id="second-row"></div>
-      <div id="filler" style={{minHeight: "20.5em"}}></div>
-
       <div className="row">
         <Footer/>
       </div>
