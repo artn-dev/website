@@ -2,6 +2,8 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import MainHero from '../components/MainHero';
 import About from '../components/About';
+import Projects from '../components/Projects';
+
 
 const Home = () => {
   return (
@@ -15,7 +17,11 @@ const Home = () => {
       </div>
 
       <div className="row py-5">
-      <About />
+        <About />
+      </div>
+
+      <div className="row py-5">
+        <Projects />
       </div>
 
       <div className="row">

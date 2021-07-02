@@ -43,7 +43,7 @@ const Header = () => (
                     <div className="navbar-nav ms-auto">
                         <HeaderLink>Home</HeaderLink>
                         <HeaderLink href="#about">Sobre</HeaderLink>
-                        <HeaderLink>Projetos</HeaderLink>
+                        <HeaderLink href="#projects">Projetos</HeaderLink>
                     </div>
                 </div>
 
