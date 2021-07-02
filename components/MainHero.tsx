@@ -12,9 +12,9 @@ const MainHero = () => {
                         <div className="container">
                             <p className="fs-1 text-light mb-0">Meu nome é Azemar</p>
                             <p className="fs-5 text-light mb-5">Eu transformo ideias em realidade</p>
-                            <button type="button" className="btn btn-primary">
+                            <a href="#projects" className="btn btn-primary">
                                 Conheça meu trabalho
-                            </button>
+                            </a>
                         </div>
                     </div>
                 </div>
