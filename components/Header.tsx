@@ -44,6 +44,7 @@ const Header = () => (
                         <HeaderLink>Home</HeaderLink>
                         <HeaderLink href="#about">Sobre</HeaderLink>
                         <HeaderLink href="#projects">Projetos</HeaderLink>
+                        <HeaderLink href="#skills">Habilidades</HeaderLink>
                     </div>
                 </div>
 

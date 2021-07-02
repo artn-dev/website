@@ -3,6 +3,7 @@ import Footer from '../components/Footer';
 import MainHero from '../components/MainHero';
 import About from '../components/About';
 import Projects from '../components/Projects';
+import Skills from '../components/Skills';
 
 
 const Home = () => {
@@ -22,6 +23,10 @@ const Home = () => {
 
       <div className="row py-5">
         <Projects />
+      </div>
+
+      <div className="row py-5">
+        <Skills />
       </div>
 
       <div className="row">
