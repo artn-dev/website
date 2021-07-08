@@ -1,0 +1,34 @@
+[
+    {
+        "name": "React.js",
+        "iconPath": "https://simpleicons.org/icons/react.svg"
+    },
+    {
+        "name": "Next.js",
+        "iconPath": "https://simpleicons.org/icons/nextdotjs.svg"
+    },
+    {
+        "name": "Git",
+        "iconPath": "https://simpleicons.org/icons/git.svg"
+    },
+    {
+        "name": "TypeScript",
+        "iconPath": "https://simpleicons.org/icons/typescript.svg"
+    },
+    {
+        "name": "Python",
+        "iconPath": "https://simpleicons.org/icons/python.svg"
+    },
+    {
+        "name": "Django",
+        "iconPath": "https://simpleicons.org/icons/django.svg"
+    },
+    {
+        "name": "C++",
+        "iconPath": "https://simpleicons.org/icons/cplusplus.svg"
+    },
+    {
+        "name": "CMake",
+        "iconPath": "https://simpleicons.org/icons/cmake.svg"
+    }
+]
