@@ -14,7 +14,7 @@ const Projects = () => {
               <div className="col-12 col-md-6 mb-5">
                 <p className="h5 mb-3">{project.title}</p>
                 <p>{project.body}</p>
-                <a className="btn btn-outline-primary" href="#">Saiba mais</a>
+                { project.link && <a className="btn btn-outline-primary" href="#">Saiba mais</a> }
               </div>
           )) }
         </div>
