@@ -24,7 +24,7 @@ const Header = () => (
             <div className="container">
 
                 <div className="navbar-brand">
-                    <Logo />
+                    <Logo color="light" />
                 </div>
 
                 <button
