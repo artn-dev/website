@@ -9,7 +9,7 @@ import Skills from '../components/Skills';
 const Home = () => {
   return (
     <div className="container-fluid d-flex flex-column min-vh-100 bg-light">
-      <div className="row sticky-top">
+      <div className="fixed-top">
         <Header/>
       </div>
 
