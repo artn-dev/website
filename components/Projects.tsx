@@ -1,10 +1,7 @@
+import projects from '../content/projects.json'
+
 const Projects = () => {
-  const mockProjects = [
-    { title: "Sed ut perspiciatis", body: "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est." },
-    { title: "Sed ut perspiciatis", body: "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est." },
-    { title: "Sed ut perspiciatis", body: "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est." },
-    { title: "Sed ut perspiciatis", body: "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est." },
-  ]
+  const lastProjects = projects.slice(0, 4)
 
   return (
     <>
@@ -13,7 +10,7 @@ const Projects = () => {
         <p className="h2">Veja meus projetos mais recentes</p>
       </div>
       <div className="row">
-          { mockProjects.map((project) => (
+          { lastProjects.map((project) => (
               <div className="col-12 col-md-6 mb-5">
                 <p className="h5 mb-3">{project.title}</p>
                 <p>{project.body}</p>
