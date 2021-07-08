@@ -1,19 +1,16 @@
 [
     {
-        "title": "Sed ut perspiciatis",
-        "body": "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est.",
-        "link": "#"
+        "title": "Site pessoal",
+        "body": "Este site é uma forma mais visual e interessante de compartilhar e demonstrar meus conhecimentos e habilidades como desenvolvedor. Além disso, ele também serve como um exemplo ao vivo e será incrementado à medida que eu aprender cada vez mais sobre desenvolvimento frontend e design de UI."
     },
     {
-        "title": "Sed ut perspiciatis",
-        "body": "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est."
+        "title": "Timer de Pomodoro",
+        "body": "Um timer que auxilía na implementação da técnica de Pomodoro. Seus tempos são ajustáveis e podem ser salvados com cookies. Ele funciona principalmente como um projeto de treino.",
+        "link": "https://github.com/artn-dev/pomodoro-clock"
     },
     {
-        "title": "Sed ut perspiciatis",
-        "body": "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est."
-    },
-    {
-        "title": "Sed ut perspiciatis",
-        "body": "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est."
+        "title": "Lista de Combate para RPGs",
+        "body": "Uma aplicação simples para gerar e gerenciar lista de combates de RPGs. Um projeto em desenvolvimento para conveniência e treino.",
+        "link": "https://github.com/artn-dev/rpg-combat-list"
     }
 ]
