@@ -12,18 +12,18 @@ interface FooterLinkProps {
 const FooterLink = ({ children, href = "/"}: FooterLinkProps) => (
   <>
     <Link href={href} passHref>
-      <a className="link-light">{children}</a>
+      <a className="link-dark">{children}</a>
     </Link>
   </>
 )
 
 const Footer = () => {
   return (
-    <footer className="container-fluid bg-dark text-light py-5">
+    <footer className="container-fluid bg-light py-5">
       <div className="row">
 
         <div className="col-12 col-md-4 d-flex justify-content-center align-items-center">
-          <Logo color="light" />
+          <Logo color="dark" />
         </div>
 
         <div className="col-12 col-md-4 d-flex justify-content-center">
@@ -41,6 +41,6 @@ const Footer = () => {
       </div>
     </footer>
   )
-};
+}
 
-export default Footer;
+export default Footer
