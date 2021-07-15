@@ -1,7 +1,6 @@
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import MainHero from '../components/MainHero';
-import About from '../components/About';
 import Projects from '../components/Projects';
 import Skills from '../components/Skills';
 
@@ -15,10 +14,6 @@ const Home = () => {
 
       <div className="row">
         <MainHero />
-      </div>
-
-      <div className="row py-5">
-        <About />
       </div>
 
       <div className="row py-5">

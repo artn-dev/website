@@ -42,7 +42,6 @@ const Header = () => (
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <div className="navbar-nav ms-auto">
                         <HeaderLink>Home</HeaderLink>
-                        <HeaderLink href="#about">Sobre</HeaderLink>
                         <HeaderLink href="#projects">Projetos</HeaderLink>
                         <HeaderLink href="#skills">Habilidades</HeaderLink>
                     </div>
