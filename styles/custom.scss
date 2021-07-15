@@ -3,13 +3,13 @@
 @import "../node_modules/bootstrap/scss/variables";
 
 $theme-colors: (
-  "primary":    #492B7B,
-  "secondary":  #F7D914,
+  "primary":    #28385e,
+  "secondary":  #304163,
   "success":    $success,
-  "info":       #9381FF,
-  "warning":    #ED8A0A,
+  "info":       #516c8d,
+  "warning":    $warning,
   "danger":     $danger,
-  "light":      $light,
+  "light":      #dddddd,
   "dark":       $dark
 );
 
