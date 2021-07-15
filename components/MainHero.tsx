@@ -10,8 +10,8 @@ const MainHero = () => {
                 <div className="row h-100">
                     <div className="col-12 col-md-6 d-flex align-items-center">
                         <div className="container">
-                            <p className="fs-1 text-light mb-0">Meu nome é Azemar</p>
-                            <p className="fs-5 text-light mb-5">Eu transformo ideias em realidade</p>
+                            <p className="fs-1 text-light mb-0">Azemar Teixeira</p>
+                            <p className="fs-5 text-light mb-5">Aluno, desenvolvedor, sempre em busca de conhecimento</p>
                             <a href="#projects" className="btn btn-primary">
                                 Conheça meu trabalho
                             </a>
