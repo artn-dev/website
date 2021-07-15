@@ -7,7 +7,7 @@ const About = () => {
             <img
               className="img-thumbnail"
               style={{ width: "90%" }}
-              src="https://source.unsplash.com/random"
+              src="/profile.png"
               alt="Foto de Azemar"
             />
           </div>
