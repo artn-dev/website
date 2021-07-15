@@ -15,7 +15,7 @@ const Projects = () => {
                 <p className="h5 mb-3">{project.title}</p>
                 <p>{project.body}</p>
                 { project.link && (
-                  <a className="btn btn-outline-primary" href={project.link} target="_blank">
+                  <a className="btn btn-outline-info" href={project.link} target="_blank">
                     Saiba mais
                   </a>
                 ) }
