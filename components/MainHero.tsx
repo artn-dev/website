@@ -6,7 +6,7 @@ const MainHero = () => {
 
     return (
         <>
-            <div className={coverClass}>
+            <div className={coverClass} style={{ backgroundImage: "url('/background.jpg')" }}>
                 <div className="row h-100">
                     <div className="col-12 col-md-6 d-flex align-items-center">
                         <div className="container">
