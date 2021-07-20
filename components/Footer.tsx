@@ -10,11 +10,9 @@ interface FooterLinkProps {
 
 
 const FooterLink = ({ children, href = "/"}: FooterLinkProps) => (
-  <>
-    <Link href={href} passHref>
-      <a className="link-dark">{children}</a>
-    </Link>
-  </>
+  <Link href={href} passHref>
+    <a className="link-dark" target={href === "/" ? "" : "_blank"}>{children}</a>
+  </Link>
 )
 
 const Footer = () => {
