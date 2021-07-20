@@ -11,7 +11,7 @@ const Projects = () => {
       </div>
       <div className="row">
           { lastProjects.map((project) => (
-              <div className="col-12 col-md-6 mb-5">
+              <div className="col-12 col-md-6 mb-5" key={project.title}>
                 <p className="h5 mb-3">{project.title}</p>
                 <p>{project.body}</p>
                 { project.link && (

@@ -8,7 +8,7 @@ interface HeaderLinkProps {
 };
 
 
-const HeaderLink = ({ children, href = "#"}: HeaderLinkProps) => (
+const HeaderLink = ({ children, href = "/"}: HeaderLinkProps) => (
     <div className="nav-item">
         <Link href={href} passHref>
             <a className="nav-link link-light" style={{

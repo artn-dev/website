@@ -10,11 +10,9 @@ interface FooterLinkProps {
 
 
 const FooterLink = ({ children, href = "/"}: FooterLinkProps) => (
-  <>
-    <Link href={href} passHref>
-      <a className="link-dark">{children}</a>
-    </Link>
-  </>
+  <Link href={href} passHref>
+    <a className="link-dark" target={href === "/" ? "" : "_blank"}>{children}</a>
+  </Link>
 )
 
 const Footer = () => {
@@ -28,7 +26,7 @@ const Footer = () => {
 
         <div className="col-12 col-md-4 d-flex justify-content-center">
           <div className={styles.footerLinks}>
-            <FooterLink>Github</FooterLink>
+            <FooterLink href="https://github.com/artn-dev">Github</FooterLink>
             <FooterLink>Linkedin</FooterLink>
             <FooterLink>Website</FooterLink>
           </div>
