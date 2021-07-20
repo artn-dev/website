@@ -26,7 +26,7 @@ const Footer = () => {
 
         <div className="col-12 col-md-4 d-flex justify-content-center">
           <div className={styles.footerLinks}>
-            <FooterLink>Github</FooterLink>
+            <FooterLink href="https://github.com/artn-dev">Github</FooterLink>
             <FooterLink>Linkedin</FooterLink>
             <FooterLink>Website</FooterLink>
           </div>
