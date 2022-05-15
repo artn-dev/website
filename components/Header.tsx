@@ -1,55 +1,101 @@
-import Link from 'next/link';
-import Logo from './Logo'
-
+import NextLink from 'next/link';
+import {
+  Box,
+  Flex,
+  Link,
+  useDisclosure,
+  useColorModeValue,
+  Stack,
+  useColorMode,
+  IconButton,
+  HStack,
+} from '@chakra-ui/react';
+import { CloseIcon, HamburgerIcon, MoonIcon, SunIcon } from '@chakra-ui/icons';
 
 interface HeaderLinkProps {
-    children: React.ReactNode;
-    href?: string;
+  children: React.ReactNode;
+  href?: string;
+}
+
+const HeaderLink = ({ children, href = '/' }: HeaderLinkProps) => (
+  <NextLink href={href} passHref>
+    <Link
+      px={2}
+      py={1}
+      href={href}
+      rounded={'md'}
+      _hover={{
+        textDecoration: 'none',
+        bg: useColorModeValue('gray.200', 'gray.700'),
+      }}
+    >
+      {children}
+    </Link>
+  </NextLink>
+);
+
+const Header = () => {
+  const { colorMode, toggleColorMode } = useColorMode();
+  const { isOpen, onOpen, onClose } = useDisclosure();
+
+  const links = [
+    ['Home', '#'],
+    ['Projetos', '#projects'],
+    ['Habilidades', '#skills'],
+  ];
+
+  return (
+    <>
+      <Box bg={useColorModeValue('gray.100', 'blue.700')} px={4}>
+        <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
+          <IconButton
+            size={'md'}
+            icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
+            aria-label={'Open Menu'}
+            display={{ md: 'none' }}
+            onClick={isOpen ? onClose : onOpen}
+          />
+
+          <HStack spacing={8} alignItems={'center'}>
+            <HStack
+              as={'nav'}
+              spacing={4}
+              display={{ base: 'none', md: 'flex' }}
+            >
+              {links.map((link, i) => (
+                <HeaderLink href={link[1]} key={i}>
+                  {link[0]}
+                </HeaderLink>
+              ))}
+            </HStack>
+          </HStack>
+
+          <Flex alignItems={'center'}>
+            <Stack direction={'row'} spacing={7}>
+              <IconButton
+                onClick={toggleColorMode}
+                aria-label='Alternar entre temas escuro e claro'
+              >
+                {colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
+              </IconButton>
+            </Stack>
+          </Flex>
+        </Flex>
+
+        {isOpen ? (
+          <Box pb={4} display={{ md: 'none' }}>
+            <Stack as={'nav'} spacing={4}>
+              {links.map((link, i) => (
+                <HeaderLink href={link[1]} key={i}>
+                  {link[0]}
+                </HeaderLink>
+              ))}
+            </Stack>
+          </Box>
+        ) : null}
+      </Box>
+    </>
+  );
 };
-
-
-const HeaderLink = ({ children, href = "/"}: HeaderLinkProps) => (
-    <div className="nav-item">
-        <Link href={href} passHref>
-            <a className="nav-link link-light" style={{
-                fontSize: 15,
-            }}>{children}</a>
-        </Link>
-    </div>
-)
-
-const Header = () => (
-    <header className="navbar-dark bg-primary">
-        <nav className="navbar navbar-expand-lg py-1">
-            <div className="container">
-
-                <div className="navbar-brand">
-                    <Logo color="light" />
-                </div>
-
-                <button
-                    className="navbar-toggler"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent"
-                    aria-controls="navbarSupportedContent"
-                    aria-expanded="false"
-                    aria-label="Toggle navigation"
-                >
-                    <span className="navbar-toggler-icon"></span>
-                </button>
-
-                <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                    <div className="navbar-nav ms-auto">
-                        <HeaderLink>Home</HeaderLink>
-                        <HeaderLink href="#projects">Projetos</HeaderLink>
-                        <HeaderLink href="#skills">Habilidades</HeaderLink>
-                    </div>
-                </div>
-
-            </div>
-        </nav>
-    </header>
-)
 
 export default Header;
