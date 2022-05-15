@@ -6,6 +6,7 @@ import {
   Image,
   Wrap,
   WrapItem,
+  useColorModeValue,
 } from '@chakra-ui/react';
 import skills from '../content/skills.json';
 
@@ -25,7 +26,12 @@ const Skills = () => {
           {skills.map((skill, i) => (
             <WrapItem key={i} maxW={'4rem'}>
               <VStack>
-                <Image boxSize={'full'} src={skill.iconPath} alt={skill.name} />
+                <Image
+                  boxSize={'full'}
+                  src={skill.iconPath}
+                  alt={skill.name}
+                  filter={useColorModeValue(null, 'invert(100%)')}
+                />
                 <Text>{skill.name}</Text>
               </VStack>
             </WrapItem>

@@ -2,6 +2,7 @@ import {
   Box,
   Text,
   useBreakpointValue,
+  useColorModeValue,
   SimpleGrid,
   Button,
 } from '@chakra-ui/react';
@@ -36,7 +37,7 @@ const Projects = () => {
                 {project.title}
               </Text>
               <Text
-                color={'blackAlpha.700'}
+                color={useColorModeValue('blackAlpha.700', 'whiteAlpha.700')}
                 fontSize={useBreakpointValue({ base: 'sm', md: 'md' })}
                 noOfLines={4}
                 mb={'2'}
