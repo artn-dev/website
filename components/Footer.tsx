@@ -35,6 +35,7 @@ const SocialButton = ({ children, label, href = '#' }: SocialButtonProps) => {
       _hover={{
         bg: useColorModeValue('blackAlpha.200', 'whiteAlpha.200'),
       }}
+      target='_blank'
     >
       <VisuallyHidden>{label}</VisuallyHidden>
       {children}
@@ -97,10 +98,13 @@ const Footer = () => {
           © 2021 Azemar da Rosa Teixeira Neto. Todos os direitos reservados
         </Text>
         <Stack direction={'row'} spacing={6}>
-          <SocialButton label={'Linkedin'}>
+          <SocialButton
+            label={'Linkedin'}
+            href={'https://www.linkedin.com/in/azemar-teixeira-700946220/'}
+          >
             <FaLinkedin />
           </SocialButton>
-          <SocialButton label={'Github'}>
+          <SocialButton label={'Github'} href={'https://github.com/artn-dev'}>
             <FaGithub />
           </SocialButton>
           <EmailButton />
