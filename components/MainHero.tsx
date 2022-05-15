@@ -1,26 +1,61 @@
-import styles from '../styles/Home.module.scss';
-import classNames from 'classnames';
+import {
+  Button,
+  Flex,
+  Stack,
+  Text,
+  useBreakpointValue,
+  VStack,
+} from '@chakra-ui/react';
 
 const MainHero = () => {
-    var coverClass = classNames("container-fluid", styles.backgroundImage);
+  return (
+    <>
+      <Flex
+        w={'full'}
+        h={'100vh'}
+        backgroundImage={'url(/background.jpg)'}
+        backgroundSize={'cover'}
+        backgroundPosition={'center center'}
+        paddingX={0}
+      >
+        <VStack
+          w={'full'}
+          justify={'center'}
+          px={useBreakpointValue({ base: 4, md: 8 })}
+          bgGradient={'linear(to-r, blackAlpha.600, transparent)'}
+        >
+          <Stack maxW={'2xl'} align={'flex-start'} spacing={6}>
+            <Text
+              color={'white'}
+              fontWeight={700}
+              lineHeight={1.2}
+              fontSize={useBreakpointValue({ base: '3xl', md: '4xl' })}
+            >
+              Azemar Teixeira
+            </Text>
+            <Text
+              color={'white'}
+              fontWeight={500}
+              lineHeight={1.2}
+              fontSize={useBreakpointValue({ base: 'md', md: 'lg' })}
+            >
+              Aluno, desenvolvedor, sempre em busca de conhecimento
+            </Text>
+            <Button
+              bg={'blue.500'}
+              rounded={'full'}
+              color={'white'}
+              _hover={{ bg: 'blue.700' }}
+              as={'a'}
+              href={'#projects'}
+            >
+              Conheça meu trabalho
+            </Button>
+          </Stack>
+        </VStack>
+      </Flex>
+    </>
+  );
+};
 
-    return (
-        <>
-            <div className={coverClass} style={{ backgroundImage: "url('/background.jpg')" }}>
-                <div className="row h-100">
-                    <div className="col-12 col-md-6 d-flex align-items-center">
-                        <div className="container">
-                            <p className="fs-1 text-light mb-0">Azemar Teixeira</p>
-                            <p className="fs-5 text-light mb-5">Aluno, desenvolvedor, sempre em busca de conhecimento</p>
-                            <a href="#projects" className="btn btn-primary">
-                                Conheça meu trabalho
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </>
-    )
-}
-
-export default MainHero
+export default MainHero;
