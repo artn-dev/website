@@ -10,6 +10,7 @@ import {
 } from '@chakra-ui/react';
 import { FaLinkedin, FaGithub, FaEnvelope } from 'react-icons/fa';
 import { ReactNode, useState } from 'react';
+import copy from 'copy-to-clipboard';
 
 interface SocialButtonProps {
   children: ReactNode;
@@ -42,10 +43,12 @@ const SocialButton = ({ children, label, href = '#' }: SocialButtonProps) => {
 };
 
 const EmailButton = () => {
+  const email = 'azemarteixeira@gmail.com';
   const [emailCopied, setEmailCopied] = useState(false);
 
   const copyEmail = () => {
     setEmailCopied(true);
+    copy(email);
     setTimeout(() => setEmailCopied(false), 1000);
   };
 
