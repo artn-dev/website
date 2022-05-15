@@ -1,17 +1,25 @@
-import { VStack, Box } from '@chakra-ui/react';
-import Header from '../components/Header';
+import { VStack, Box, useColorMode, IconButton } from '@chakra-ui/react';
+import { MoonIcon, SunIcon } from '@chakra-ui/icons';
 import Footer from '../components/Footer';
 import MainHero from '../components/MainHero';
 import Projects from '../components/Projects';
 import Skills from '../components/Skills';
 
 const Home = () => {
+  const { colorMode, toggleColorMode } = useColorMode();
   return (
     <>
       <VStack spacing={0}>
-        <Box pos='sticky' top={0} zIndex={2} w={'full'}>
-          <Header />
-        </Box>
+        <IconButton
+          position={'fixed'}
+          top={'20px'}
+          right={'20px'}
+          onClick={toggleColorMode}
+          aria-label='Alternar entre temas escuro e claro'
+        >
+          {colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
+        </IconButton>
+
         <MainHero />
         <Box py={10} w={'full'}>
           <Projects />
