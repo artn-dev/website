@@ -13,7 +13,7 @@ import skills from '../content/skills.json';
 const Skills = () => {
   return (
     <>
-      <Box w={'full'} px={'16'}>
+      <Box id={'skills'} w={'full'} px={'16'}>
         <Text
           lineHeight={1.2}
           fontSize={useBreakpointValue({ base: '3xl', md: '4xl' })}

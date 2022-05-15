@@ -13,7 +13,7 @@ const Projects = () => {
 
   return (
     <>
-      <Box w={'full'} px={'16'}>
+      <Box id={'projects'} w={'full'} px={'16'}>
         <Text
           lineHeight={1.2}
           fontSize={useBreakpointValue({ base: '3xl', md: '4xl' })}
