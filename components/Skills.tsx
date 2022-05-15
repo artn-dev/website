@@ -1,23 +1,45 @@
-import skills from '../content/skills.json'
+import {
+  Box,
+  VStack,
+  Text,
+  useBreakpointValue,
+  Image,
+  Wrap,
+  WrapItem,
+  useColorModeValue,
+} from '@chakra-ui/react';
+import skills from '../content/skills.json';
 
 const Skills = () => {
   return (
     <>
-    <div id="skills" className="container px-5">
-      <div className="row mb-5">
-        <p className="h2">Habilidades que tenho a oferecer</p>
-      </div>
-      <div className="row">
-        { skills.map((skill) => (
-          <div className="col-6 col-sm-3 mb-4 text-center" key={skill.name}>
-            <img className="mb-3" height={60} src={skill.iconPath} alt="" />
-            <p className="fw-bold">{skill.name}</p>
-          </div>
-        )) }
-      </div>
-    </div>
+      <Box id={'skills'} w={'full'} px={'16'}>
+        <Text
+          lineHeight={1.2}
+          fontSize={useBreakpointValue({ base: '3xl', md: '4xl' })}
+          mb={'8'}
+        >
+          As habilidades que vou suar por você
+        </Text>
+
+        <Wrap justify={'center'} spacing={'30px'} w={'full'}>
+          {skills.map((skill, i) => (
+            <WrapItem key={i} maxW={'4rem'}>
+              <VStack>
+                <Image
+                  boxSize={'full'}
+                  src={skill.iconPath}
+                  alt={skill.name}
+                  filter={useColorModeValue(null, 'invert(100%)')}
+                />
+                <Text>{skill.name}</Text>
+              </VStack>
+            </WrapItem>
+          ))}
+        </Wrap>
+      </Box>
     </>
-  )
+  );
 };
 
 export default Skills;
