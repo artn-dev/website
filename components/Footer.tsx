@@ -1,44 +1,117 @@
-import Link from 'next/link'
-import Logo from './Logo'
-import styles from '../styles/Home.module.scss'
+import {
+  Box,
+  chakra,
+  Container,
+  Stack,
+  Text,
+  useColorModeValue,
+  VisuallyHidden,
+  Tooltip,
+} from '@chakra-ui/react';
+import { FaLinkedin, FaGithub, FaEnvelope } from 'react-icons/fa';
+import { ReactNode, useState } from 'react';
+import copy from 'copy-to-clipboard';
 
-
-interface FooterLinkProps {
-  children: React.ReactNode;
+interface SocialButtonProps {
+  children: ReactNode;
+  label: string;
   href?: string;
+}
+
+const SocialButton = ({ children, label, href = '#' }: SocialButtonProps) => {
+  return (
+    <chakra.button
+      bg={useColorModeValue('blackAlpha.100', 'whiteAlpha.100')}
+      rounded={'full'}
+      w={8}
+      h={8}
+      cursor={'pointer'}
+      as={'a'}
+      href={href}
+      display={'inline-flex'}
+      alignItems={'center'}
+      justifyContent={'center'}
+      transition={'background 0.3s ease'}
+      _hover={{
+        bg: useColorModeValue('blackAlpha.200', 'whiteAlpha.200'),
+      }}
+      target='_blank'
+    >
+      <VisuallyHidden>{label}</VisuallyHidden>
+      {children}
+    </chakra.button>
+  );
 };
 
+const EmailButton = () => {
+  const email = 'azemarteixeira@gmail.com';
+  const [emailCopied, setEmailCopied] = useState(false);
 
-const FooterLink = ({ children, href = "/"}: FooterLinkProps) => (
-  <Link href={href} passHref>
-    <a className="link-dark" target={href === "/" ? "" : "_blank"}>{children}</a>
-  </Link>
-)
+  const copyEmail = () => {
+    setEmailCopied(true);
+    copy(email);
+    setTimeout(() => setEmailCopied(false), 1000);
+  };
+
+  return (
+    <Tooltip label='E-mail copiado em seu clipboard' isOpen={emailCopied}>
+      <span>
+        <chakra.button
+          bg={useColorModeValue('blackAlpha.100', 'whiteAlpha.100')}
+          rounded={'full'}
+          w={8}
+          h={8}
+          cursor={'pointer'}
+          display={'inline-flex'}
+          alignItems={'center'}
+          justifyContent={'center'}
+          transition={'background 0.3s ease'}
+          _hover={{
+            bg: useColorModeValue('blackAlpha.200', 'whiteAlpha.200'),
+          }}
+          onClick={copyEmail}
+        >
+          <VisuallyHidden>E-mail</VisuallyHidden>
+          <FaEnvelope />
+        </chakra.button>
+      </span>
+    </Tooltip>
+  );
+};
 
 const Footer = () => {
   return (
-    <footer className="container-fluid bg-light py-5">
-      <div className="row">
+    <Box
+      bg={useColorModeValue('gray.50', 'gray.900')}
+      color={useColorModeValue('gray.700', 'gray.200')}
+    >
+      <Container
+        as={Stack}
+        maxW={'6xl'}
+        py={4}
+        direction={{ base: 'column', md: 'row' }}
+        spacing={4}
+        justify={{ base: 'center', md: 'space-between' }}
+        align={{ base: 'center', md: 'center' }}
+      >
+        <Text>
+          © 2021 Azemar da Rosa Teixeira Neto. Todos os direitos reservados
+        </Text>
+        <Stack direction={'row'} spacing={6}>
+          <SocialButton
+            label={'Linkedin'}
+            href={'https://www.linkedin.com/in/azemar-teixeira-700946220/'}
+          >
+            <FaLinkedin />
+          </SocialButton>
+          <SocialButton label={'Github'} href={'https://github.com/artn-dev'}>
+            <FaGithub />
+          </SocialButton>
+          <EmailButton />
+        </Stack>
+      </Container>
+    </Box>
+  );
+};
 
-        <div className="col-12 col-md-4 d-flex justify-content-center align-items-center">
-          <Logo color="dark" />
-        </div>
-
-        <div className="col-12 col-md-4 d-flex justify-content-center">
-          <div className={styles.footerLinks}>
-            <FooterLink href="https://github.com/artn-dev">Github</FooterLink>
-            <FooterLink>Linkedin</FooterLink>
-            <FooterLink>Website</FooterLink>
-          </div>
-        </div>
-
-        <div className="col">
-          <p className={styles.copyrightNotice}>© Azemar da Rosa Teixeira Neto, 2021</p>
-        </div>
-
-      </div>
-    </footer>
-  )
-}
-
-export default Footer
+export default Footer;

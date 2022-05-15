@@ -1,34 +1,38 @@
-import Header from '../components/Header';
+import { VStack, Box, useColorMode, IconButton } from '@chakra-ui/react';
+import { MoonIcon, SunIcon } from '@chakra-ui/icons';
 import Footer from '../components/Footer';
 import MainHero from '../components/MainHero';
 import Projects from '../components/Projects';
 import Skills from '../components/Skills';
 
-
 const Home = () => {
+  const { colorMode, toggleColorMode } = useColorMode();
   return (
-    <div className="container-fluid d-flex flex-column min-vh-100 bg-light">
-      <div className="fixed-top">
-        <Header/>
-      </div>
+    <>
+      <VStack spacing={0}>
+        <IconButton
+          position={'fixed'}
+          top={'20px'}
+          right={'20px'}
+          onClick={toggleColorMode}
+          aria-label='Alternar entre temas escuro e claro'
+        >
+          {colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
+        </IconButton>
 
-      <div className="row">
         <MainHero />
-      </div>
-
-      <div className="row py-5">
-        <Projects />
-      </div>
-
-      <div className="row py-5">
-        <Skills />
-      </div>
-
-      <div className="row">
-        <Footer/>
-      </div>
-    </div>
-  )
-}
+        <Box py={10} w={'full'}>
+          <Projects />
+        </Box>
+        <Box py={10} w={'full'}>
+          <Skills />
+        </Box>
+        <Box w={'full'}>
+          <Footer />
+        </Box>
+      </VStack>
+    </>
+  );
+};
 
 export default Home;
